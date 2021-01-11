@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @slack.hours %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @slack.minutes %>
+</p>
+
+<%= link_to 'Edit', edit_slack_path(@slack) %> |
+<%= link_to 'Back', slacks_path %>

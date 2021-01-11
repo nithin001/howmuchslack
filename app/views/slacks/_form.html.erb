@@ -1,0 +1,27 @@
+<%= form_with(model: slack, local: true) do |form| %>
+  <% if slack.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slack.errors.count, "error") %> prohibited this slack from being saved:</h2>
+
+      <ul>
+        <% slack.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hours %>
+    <%= form.number_field :hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minutes %>
+    <%= form.number_field :minutes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
